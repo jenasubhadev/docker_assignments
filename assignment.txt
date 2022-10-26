@@ -1,0 +1,25 @@
+Make a note of the scenarios mentioned as per below.
+Share the commands as needed to achieve the same.
+	Pull the below images from docker-hub :
+o	mysql ( latest )
+o	nginx ( latest )
+o	tomcat (8.0-alpine)
+o	node ( latest )
+
+	Create 4 folders with the names , mysql, nginx , tomcat , node 
+Inside each folder, create a docker-file using  each image as above 
+
+	Write a Docker-file as per below and create 4 containers .
+o	Inside tomcat folder, download this sample.war file.
+https://github.com/softwareyoga/docker-tomcat-tutorial/blob/master/sample.war
+Place this war file inside /usr/local/tomcat/webapps/ with-in the container.
+Expose port 8080 
+Run the catalina.sh 
+o	Inside the mysql folder, write a docker-file to use the image.
+Specify the environment variables for mysql which are required to run mysql.
+root user password : password
+database : demo create another user , sachin and its password should be cricket
+All the data of the MySQL tables and others are residing at /var/lib/mysql
+inside the container . Create a local directory, data and mount it as a volume. Make sure to provide both read and write access to this directory to container.
+o	For nginx and node , write respective dockerfile to pull the images .
+	Write a docker-compose file to illustrate these 4 containers in 1 service . 
